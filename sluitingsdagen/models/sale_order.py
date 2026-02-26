@@ -16,5 +16,5 @@ class sale_order(models.Model):
 	@api.onchange('commitment_date')
 	def _onchange_deliveryDate(self):
 		if self.availableForDelivery():
-			raise UserError("The selected delivery date falls on a closing day. Please select another date.")
+			raise UserError(_("The selected delivery date falls on a closing day. Please select another date."))
 		

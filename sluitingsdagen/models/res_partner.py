@@ -1,5 +1,5 @@
 from odoo import models, fields
-
+from odoo.tools import _
 class res_partner(models.Model):
     _inherit = "res.partner"
 
