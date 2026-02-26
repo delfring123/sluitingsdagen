@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="view_sluitingsdagen_form_inherit" model="ir.ui.view">
+			<field name="name">sluitingsdagen.form.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/notebook" position="inside">
+					<page string="Sluitingsdagen">
+						<h5 style="clear: both;">Closed on...</h5>
+						<div>
+							<group>
+								<field name="monday"/>
+								<field name="tuesday"/>
+								<field name="wednesday"/>
+								<field name="thursday"/>
+								<field name="friday"/>
+								<field name="saturday"/>
+								<field name="sunday"/>
+							</group>
+						</div>
+					</page>
+				</xpath>
+			</field>			
+		</record>	
+	</data>
+</odoo>
