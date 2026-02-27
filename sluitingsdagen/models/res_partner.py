@@ -1,5 +1,6 @@
 from odoo import models, fields
 from odoo.tools import _
+
 class res_partner(models.Model):
     _inherit = "res.partner"
 
@@ -11,7 +12,7 @@ class res_partner(models.Model):
     saturday = fields.Boolean(string="Saturday", default=False)
     sunday = fields.Boolean(string="Sunday", default=False)
     
-
+    
 
     def isDaySelected(self, day):
         if day:

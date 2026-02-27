@@ -9,17 +9,17 @@
 				<xpath expr="//sheet/notebook" position="inside">
 					<page string="Logistics" name="logistics">
 						<h5 style="clear: both;">Closed on...</h5>
-						<div>
-							<group>
-								<field name="monday"/>
-								<field name="tuesday"/>
-								<field name="wednesday"/>
-								<field name="thursday"/>
-								<field name="friday"/>
-								<field name="saturday"/>
-								<field name="sunday"/>
-							</group>
-						</div>
+						
+						<group>
+							<field name="monday"/>
+							<field name="tuesday"/>
+							<field name="wednesday"/>
+							<field name="thursday"/>
+							<field name="friday"/>
+							<field name="saturday"/>
+							<field name="sunday"/>
+						</group>
+						
 					</page>
 				</xpath>
 			</field>			
