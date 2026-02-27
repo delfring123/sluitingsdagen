@@ -20,6 +20,8 @@ class sale_order(models.Model):
 
 	@api.onchange('partner_id')
 	def _onchange_partner_id(self):
+		print("\n\n\n\n\nPartner changed\n\n\n\n\n")
 		if self.notAvailableForDelivery():
+			print("\n\n\n\n\nError triggered\n\n\n\n\n")
 			raise UserError(_("The selected customer is closed on te selected delivery date. Please select another date and try again."))
 		
