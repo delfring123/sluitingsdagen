@@ -6,15 +6,20 @@ class sale_order(models.Model):
 
 	
 
-	def availableForDelivery(self):
+	def notAvailableForDelivery(self):
 		deliveryDate = self.commitment_date
 		if deliveryDate:
 			return self.partner_id.isDaySelected(deliveryDate.weekday())
 		return False
 
-	@api.onchange('partner_id')
+	
 	@api.onchange('commitment_date')
 	def _onchange_deliveryDate(self):
-		if self.availableForDelivery():
+		if self.notAvailableForDelivery():
 			raise UserError(_("The selected delivery date falls on a closing day. Please select another date."))
+
+	@api.onchange('partner_id')
+	def _onchange_partner_id(self):
+		if self.notAvailableForDelivery():
+			raise UserError(_("The selected customer is closed on te selected delivery date. Please select another date and try again."))
 		
