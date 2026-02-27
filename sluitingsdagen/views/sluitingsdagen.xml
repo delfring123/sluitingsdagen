@@ -7,7 +7,7 @@
 			<field name="inherit_id" ref="base.view_partner_form"/>
 			<field name="arch" type="xml">
 				<xpath expr="//sheet/notebook" position="inside">
-					<page string="Logistics">
+					<page string="Logistics" name="logistics">
 						<h5 style="clear: both;">Closed on...</h5>
 						<div>
 							<group>
